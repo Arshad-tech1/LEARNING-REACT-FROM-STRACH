@@ -2,7 +2,7 @@
 import axios from 'axios'
 import React, { useEffect, useState }  from 'react'
 
-function GalleryProject() {
+function GalleryPage() {
     const [userdata, setUserData] = useState([])
     const [pageno, setPageNo] = useState(1)
     const getGalleryData = async () => {
@@ -60,4 +60,4 @@ function GalleryProject() {
     )
 }
 
-export default GalleryProject
+export default GalleryPage

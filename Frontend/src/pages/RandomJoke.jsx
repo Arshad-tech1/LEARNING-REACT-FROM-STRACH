@@ -23,7 +23,6 @@ const RandomJoke = () => {
 
         <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {jokes.map((joke, index) => (
-                console.log(joke),
             <div
                 key={joke.id}
                 className="relative bg-white rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300"

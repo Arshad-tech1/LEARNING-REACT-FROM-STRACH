@@ -6,7 +6,8 @@ function GalleryPage() {
     const [userdata, setUserData] = useState([])
     const [pageno, setPageNo] = useState(1)
     const getGalleryData = async () => {
-    const res = await axios.get(`https://picsum.photos/v2/list?page=${pageno}&limit=6`)
+    const res = await axios.get(`/api/v1/gallery?page=${pageno}`)
+    console.log(res.data)
     setUserData(res.data)
     }
 

@@ -14,7 +14,7 @@ function App() {
     <>
       <Routes>
         <Route path = '/gallery' element= {<GalleryPage />} /> 
-        <Route path = '/Home' element= {<Home />} /> 
+        <Route path = '/' element= {<Home />} /> 
         <Route path = '/jokes' element= {<RandomJoke />} /> 
         <Route path = '/password_generator' element= {<PasswordGenerator />} /> 
       </Routes>

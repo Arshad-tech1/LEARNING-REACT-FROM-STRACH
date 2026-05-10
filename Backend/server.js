@@ -30,3 +30,14 @@ app.get('/api/v1/gallery', async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
+
+
+
+// FREE API FOR TESTING AND PRACTICE 
+/*
+http://universities.hipolabs.com/search?country=india
+https://randomuser.me/api/
+
+
+
+*/

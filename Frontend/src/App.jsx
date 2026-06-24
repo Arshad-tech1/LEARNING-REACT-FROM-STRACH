@@ -6,7 +6,7 @@ import Home from './pages/Home'
 import { Routes, Route } from "react-router-dom";
 import RandomJoke from './pages/RandomJoke';
 import PasswordGenerator from './features/PasswordGenerator/pages/PasswordGenerator';
-
+import Login from './features/auth/login-register/pages/Login';
 
 function App() {
 
@@ -16,7 +16,8 @@ function App() {
         <Route path = '/gallery' element= {<GalleryPage />} /> 
         <Route path = '/' element= {<Home />} /> 
         <Route path = '/jokes' element= {<RandomJoke />} /> 
-        <Route path = '/password_generator' element= {<PasswordGenerator />} /> 
+        <Route path = '/password_generator' element= {<PasswordGenerator />} />
+        <Route path = '/login' element= {<Login />} /> 
       </Routes>
 
     </>

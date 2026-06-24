@@ -38,6 +38,4 @@ app.listen(PORT, () => {
 http://universities.hipolabs.com/search?country=india
 https://randomuser.me/api/
 
-
-
 */

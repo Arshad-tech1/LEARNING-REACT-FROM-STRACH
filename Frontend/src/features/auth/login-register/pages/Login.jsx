@@ -5,14 +5,14 @@ const Login = () => {
   const navigate = useNavigate()
 
   const loginWithGoogle = useGoogleLogin({
-    onSuccess: async (response) => {
-      const result = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
-        headers: { Authorization: `Bearer ${response.access_token}` },
+    onSuccess: async ({ access_token }) => {
+      const res = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+        headers: { Authorization: `Bearer ${access_token}` },
       })
-      const user = await result.json()
+      const user = await res.json()
 
       localStorage.setItem('user', JSON.stringify(user))
-      navigate('/')
+      navigate('/home')
     },
   })
 

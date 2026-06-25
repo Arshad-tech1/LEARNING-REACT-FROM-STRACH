@@ -7,7 +7,7 @@ const Header = () => {
       <div className="flex items-center px-6 py-4">
         <h3 className="text-2xl font-bold">React Learning</h3>
         <nav className="flex flex-1 justify-center items-center gap-6">
-          <Link to="/" className="cursor-pointer hover:text-blue-400">Home</Link>
+          <Link to="/home" className="cursor-pointer hover:text-blue-400">Home</Link>
           <Link to="/gallery" className="cursor-pointer hover:text-blue-400">Gallery</Link>
           <Link to="/jokes" className="cursor-pointer hover:text-blue-400">Jokes</Link>
           <Link to="/password_generator" className="cursor-pointer hover:text-blue-400">Password Generator</Link>

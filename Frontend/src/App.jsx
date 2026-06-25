@@ -8,16 +8,17 @@ import RandomJoke from './pages/RandomJoke';
 import PasswordGenerator from './features/PasswordGenerator/pages/PasswordGenerator';
 import Login from './features/auth/login-register/pages/Login';
 
-function App() {
+function App() {  
 
   return (
     <>
       <Routes>
-        <Route path = '/gallery' element= {<GalleryPage />} /> 
-        <Route path = '/' element= {<Home />} /> 
-        <Route path = '/jokes' element= {<RandomJoke />} /> 
-        <Route path = '/password_generator' element= {<PasswordGenerator />} />
-        <Route path = '/login' element= {<Login />} /> 
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/jokes" element={<RandomJoke />} />
+        <Route path="/password_generator" element={<PasswordGenerator />} />
       </Routes>
 
     </>

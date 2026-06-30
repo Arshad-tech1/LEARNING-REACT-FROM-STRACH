@@ -1,8 +1,10 @@
 import { useGoogleLogin } from '@react-oauth/google'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, Navigate } from 'react-router-dom'
+import { useAuth } from '../../AuthContext'
 
 const Login = () => {
   const navigate = useNavigate()
+  const { login, isAuthenticated } = useAuth()
 
   const loginWithGoogle = useGoogleLogin({
     onSuccess: async ({ access_token }) => {
@@ -11,10 +13,15 @@ const Login = () => {
       })
       const user = await res.json()
 
-      localStorage.setItem('user', JSON.stringify(user))
+      login(user)
       navigate('/home')
     },
   })
+
+  // Already signed in? Skip the login screen.
+  if (isAuthenticated) {
+    return <Navigate to="/home" replace />
+  }
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-6">
